@@ -497,9 +497,9 @@ nav{
   justify-content: center;
   background: #fff;
   color: #1b507e;
-  max-width: 700px;
-  height: 350px;
-  padding: 15px 30px;
+  width: 300px;
+  height: 300px;
+  padding: 20px;
   border-radius: 28px;
 }
 .icon-heading{
