@@ -203,7 +203,7 @@ nav{
 .underline {
   position: absolute;
   top: 110px;
-  left: 22%;
+  left: 15%;
   margin: 1rem auto, 0 auto;
 }
 }
@@ -263,14 +263,14 @@ nav{
 }
 .payment{
   position: relative;
-  width: 260px;
+  width: 230px;
   background: #fff;
   color: rgb(0, 36, 68);
   border-radius: 2rem;
-  margin: 20px;
+  margin: 10px;
   text-align: left;
   height: 270px;
-  padding: 20px 25px;
+  padding: 26px 10px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.05) 10px 24px 54px;
 }
@@ -482,11 +482,12 @@ nav{
 /* Slider */
 .slider-container{
   position: relative;
-  width: 100%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 30px;
 
 }
 .slider{
@@ -498,7 +499,7 @@ nav{
   color: #1b507e;
   max-width: 700px;
   height: 300px;
-  padding: 40px;
+  padding: 10px;
   border-radius: 20px;
 }
 .icon-heading{
@@ -562,7 +563,7 @@ nav{
   height: 1.2rem;
   color: #fff;
   border-radius: 1.2rem;
-  box-shadow: rgba(0, 0, 0, 3) 3px 6px 12px;
+  box-shadow: rgba(0, 0, 0, 1) 3px 6px 12px;
   border: 0.1rem solid transparent;
   background-color: #fff;
   cursor: pointer;
@@ -570,10 +571,10 @@ nav{
 @media screen and (max-width: 1200px) {
 
   .prev-btn {
-    left: 70px;
+    left: 30px;
   }
   .next-btn {
-    right: 70px;
+    right: 30px;
   }
 
 }
