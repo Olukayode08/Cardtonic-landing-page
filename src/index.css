@@ -263,14 +263,14 @@ nav{
 }
 .payment{
   position: relative;
-  width: 230px;
+  width: 250px;
   background: #fff;
   color: rgb(0, 36, 68);
   border-radius: 2rem;
   margin: 10px;
   text-align: left;
   height: 270px;
-  padding: 30px 10px;
+  padding: 50px 10px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.05) 10px 24px 54px;
 }
@@ -350,8 +350,8 @@ nav{
     flex-direction: column;
   }
   .payment{
-    width: 370px;
-    height: 240px;
+    width: 250px;
+    height: 270px;
   }
   .instant-text{
     font-weight: 400;
