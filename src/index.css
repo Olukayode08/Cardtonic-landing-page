@@ -592,13 +592,8 @@ nav{
 
 }
 @media screen and (max-width: 600px ) {
-    .prev-btn{
-    left: 0px;
-    color: #000;
-  }
-  .next-btn{
-    right: 0px;
-    color: #000;
+  .btn-container{
+    display: none;
   }
   .slider{
     padding: 20px 5px;
