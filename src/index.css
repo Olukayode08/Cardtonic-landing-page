@@ -499,7 +499,7 @@ nav{
   color: #1b507e;
   max-width: 600px;
   height: 300px;
-  padding: 10px;
+  padding: 15px 20px;
   border-radius: 28px;
 }
 .icon-heading{
@@ -520,7 +520,7 @@ nav{
   align-items: center;
   justify-content: center;
   padding: 10px;
-  width: 70%;
+  width: 95%;
 }
 
 .next-btn{
