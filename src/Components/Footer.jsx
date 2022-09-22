@@ -21,7 +21,7 @@ const Footer = () => {
             </div>
             <div className='footer-two'>
                 <img src={google} alt="Google" />
-                <img src={apple} alt="Apple" />
+                <img src={apple} className='apple' alt="Apple" />
             </div>
             </div>
 

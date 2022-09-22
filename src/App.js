@@ -13,14 +13,10 @@ import Footer from "./Components/Footer";
 import './website.css'
 
 function App() {
-  const [active, setActive] = useState(false)
-  const toggle = ()=>{
-    setActive(!active)
-  }
+
   return (
     <>
-            <Navbar toggle={toggle} />
-            <Dropdown active={active} toggle={toggle} />
+            <Navbar />
             <Secone />
             <Sectwo />
             <Secthree />

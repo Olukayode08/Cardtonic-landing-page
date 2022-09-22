@@ -1,60 +1,52 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
+import { Navigation, Pagination} from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css/navigation';
+import "swiper/css/pagination";
+
+import 'swiper/css';
 import {slider} from '../data'
 import {AiOutlineArrowRight, AiOutlineArrowLeft} from 'react-icons/ai'
 
 const Slider = () => {
-    const [icons, setIcons] = useState(0)
-    const {id, sliderTitle, sliderText, sliderIcon} = slider[icons]
-
-    const checkIcon = (icon)=>{
-      if (icon > slider.length - 1) {
-          return 0
-      }else if (icon < 0) {
-        return slider.length-1
-      }else{
-        return icon
-      }
-    }
-
-    const nextSlide= ()=>{
-      setIcons((icons)=>{
-        let newIcon = icons + 1
-        return checkIcon(newIcon)
-      })
-    }
-
-     const prevSlide= ()=>{
-      setIcons((icons)=>{
-        let newIcon = icons - 1
-        return checkIcon(newIcon)
-      })
-    }
-    const moveDots = id =>{
-      setIcons(id)
-    }
-
-
   return (
     <>
-        <div className='slider-container'>
+    <div className='position'>
+    <div className='slider-container'>
+      <Swiper
+      modules={[Navigation, Pagination]}
+      spaceBetween={10}
+      slidesPerView={1}
+      loop={true}
+      pagination={{
+          clickable: true,
+        }}
+      navigation = {{
+      prevEl: '.swiper-custom-navigation-prev',
+      nextEl: '.swiper-custom-navigation-next',
+      }}
+    >
+      {slider.map(slide =>(
+        <SwiperSlide key={slide.id}>
+          <div className=''>
             <article className='slider'>
-              <h3 className="icon-heading">{sliderTitle}</h3>
-              <p className='icon-text'>{sliderText}</p>
-              <img className='icon-img' src={sliderIcon} alt="Cardonic" />             
-              <div className='dots'>
-                {slider.map(({slide, id})=>{
-                  return(
-                    <button className='slider-dots' onClick={()=>moveDots(id - 1)} key={id}>.</button>
-                  )
-
-                })}
-            </div>
+              <h3 className="icon-heading">{slide.sliderTitle}</h3>
+              <p className='icon-text'>{slide.sliderText}</p>
+              <img className='icon-img' src={slide.sliderIcon} alt="Cardonic" />
             </article>
-            <div className="btn-container">
-              <button className='prev-btn' onClick={prevSlide}> <AiOutlineArrowLeft /></button>
-              <button className='next-btn' onClick={nextSlide}><AiOutlineArrowRight /></button>            
-            </div> 
-        </div>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+    <div className="btn-container">
+      <button className='swiper-custom-navigation swiper-custom-navigation-prev backNavigate'> <AiOutlineArrowLeft size={25} /></button>
+      <button className='swiper-custom-navigation swiper-custom-navigation-next frontNavigate'><AiOutlineArrowRight size={25} /></button>            
+    </div>
+    </div>
+  
+    </div>
+
+    
 
     </>
   )

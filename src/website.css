@@ -456,3 +456,17 @@ footer{
         font-size: 12px;
     }
 }
+@media screen and (max-width: 280px) {
+
+    .download-underline,
+    .underline{
+        display: none;
+    }
+    .footer-two{
+        flex-direction: column;
+        margin: auto;
+    }
+    .apple{
+        margin-top: 10px;
+    }
+}
